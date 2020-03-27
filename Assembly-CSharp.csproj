@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{2dc007da-afc1-772e-f252-eac94ca3c504}</ProjectGuid>
+    <ProjectGuid>{DA07C02D-C1AF-2E77-F252-EAC94CA3C504}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,9 +45,43 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Mantul.cs" />
+     <Compile Include="Assets\BallMovement.cs" />
      <Compile Include="Assets\MoveLeft.cs" />
      <Compile Include="Assets\MoveRight.cs" />
+     <Compile Include="Assets\Timer.cs" />
+ <Reference Include="Unity.Timeline.Editor">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.VSCode.Editor">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Timeline">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.CollabProxy.Editor">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Rider.Editor">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Editor">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Users/auliyakhanza/Game/Coba Pong/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -576,52 +610,6 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2019.3.3f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Unity.Timeline.Editor.csproj">
-      <Project>{b15b2e9b-2282-fd2a-6fe0-5dfec8028a57}</Project>
-      <Name>Unity.Timeline.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.VSCode.Editor.csproj">
-      <Project>{81ff2f3b-fbc0-968e-d242-641252df0b44}</Project>
-      <Name>Unity.VSCode.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
-      <Project>{944ebcd3-14e9-c96d-9445-600bec731788}</Project>
-      <Name>Unity.TextMeshPro.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEngine.UI.csproj">
-      <Project>{b0226372-2ef4-bcf5-0b69-ee1830991b00}</Project>
-      <Name>UnityEngine.UI</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Timeline.csproj">
-      <Project>{6ce9ce68-a88e-0341-ca83-ca9e5934c5ee}</Project>
-      <Name>Unity.Timeline</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.CollabProxy.Editor.csproj">
-      <Project>{4251d775-74f6-a9b8-2f9c-9f49bdcf6b99}</Project>
-      <Name>Unity.CollabProxy.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Rider.Editor.csproj">
-      <Project>{18ed5549-c486-7494-817d-3c127b6e7abc}</Project>
-      <Name>Unity.Rider.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Sprite.Editor.csproj">
-      <Project>{cc163b8a-4ec9-68a5-fe6e-c33ea629b87f}</Project>
-      <Name>Unity.2D.Sprite.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.2D.Tilemap.Editor.csproj">
-      <Project>{eb56d20f-f23d-0f09-ed64-491b4c3c3017}</Project>
-      <Name>Unity.2D.Tilemap.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.TextMeshPro.csproj">
-      <Project>{5afb07c8-71af-3048-2932-e92caf5bfc9c}</Project>
-      <Name>Unity.TextMeshPro</Name>
-    </ProjectReference>
-    <ProjectReference Include="UnityEditor.UI.csproj">
-      <Project>{7ed116dc-4770-54c9-fd8a-7c2234b13bf9}</Project>
-      <Name>UnityEditor.UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
