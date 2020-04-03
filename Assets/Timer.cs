@@ -22,10 +22,12 @@ public class Timer : MonoBehaviour
 
     IEnumerator hitungmundur(){
         while(counter > 0){
-           yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1);
             counter -= 1;
-            timerText.text = counter.ToString(); 
+            timerText.text = counter.ToString();
         }
-        
+
+        timerText.text = "GAME OVER!";
+
     }
 }
