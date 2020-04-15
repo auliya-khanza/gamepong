@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class BallMovement : MonoBehaviour
 {
-    public int speed=20;
     // Start is called before the first frame update
     public Rigidbody2D sesuatu;
     // Start is called before the first frame update
     public Animator animtr;
     void Start()
     {
-        sesuatu.velocity = new Vector2(-1,-1) * speed;
-        animtr.SetBool("IsMove", true);
+        int x = Random.Range(0, 2) * 2 - 1; //nilai x bisa -1 atau 1
+        int y = Random.Range(0, 2) * 2 - 1; //nilai y bisa -1 atau 1
+        int speed = Random.Range(20, 26);
+        sesuatu.velocity = new Vector2(x, y) * speed;
+        sesuatu.GetComponent<Transform>().position = Vector2.zero;
+        animtr.SetBool("IsMove", true); //mengubah animasi ke api bergerak
     }
 
     // Update is called once per frame
@@ -36,8 +40,13 @@ public class BallMovement : MonoBehaviour
         sesuatu.velocity = Vector2.zero;
         animtr.SetBool("IsMove", false);
         sesuatu.GetComponent<Transform>().position = Vector2.zero;
+
         yield return new WaitForSeconds(1);
-        sesuatu.velocity = new Vector2(-1,-1) * speed;
-        animtr.SetBool("IsMove", true);
+
+        int x = Random.Range(0, 2) * 2 - 1; //nilai x bisa -1 atau 1
+        int y = Random.Range(0, 2) * 2 - 1; //nilai y bisa -1 atau 1
+        int speed = Random.Range(20, 26);
+        sesuatu.velocity = new Vector2(x, y) * speed;
+        animtr.SetBool("IsMove", true); //mengubah animasi ke api bergerak
     }
 }
