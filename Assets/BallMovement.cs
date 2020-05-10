@@ -9,6 +9,8 @@ public class BallMovement : MonoBehaviour
     public Rigidbody2D sesuatu;
     // Start is called before the first frame update
     public Animator animtr;
+
+    public AudioSource hitEffect;
     void Start()
     {
         int x = Random.Range(0, 2) * 2 - 1; //nilai x bisa -1 atau 1
@@ -34,6 +36,10 @@ public class BallMovement : MonoBehaviour
         {
                 StartCoroutine(jeda());
         }
+        if (other.collider.tag == "Player")
+        {
+            hitEffect.Play();
+        }
     }
 
     IEnumerator jeda(){
@@ -50,3 +56,4 @@ public class BallMovement : MonoBehaviour
         animtr.SetBool("IsMove", true); //mengubah animasi ke api bergerak
     }
 }
+ 
